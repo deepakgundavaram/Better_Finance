@@ -1,0 +1,11 @@
+.sectionContainer{
+    display: flex;
+    border: 1px solid black;
+}
+
+.tab{
+    width: 33%;
+    text-align: center;
+    border-right: 1px solid black;
+    height:100%;
+}

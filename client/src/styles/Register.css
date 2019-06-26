@@ -1,0 +1,58 @@
+.register-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.back-btn{
+    text-decoration: none;
+    text-align: center;
+}
+
+.register-container-text{
+    text-align: center;
+    margin-left:80px;
+}
+
+.form{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    align-items: center;
+}
+
+.section-input{
+    display: flex;
+    flex-direction:column-reverse;
+    padding-bottom:30px;
+    width:50%;
+    justify-content: center;
+}
+
+.input{
+    border: none;
+    border-bottom: 1px solid gray; 
+    font-size:30px; 
+}
+
+input:focus{
+    outline:none;
+}
+
+.input-btn>button{
+    display:flex;
+    justify-content: center;
+    color:white;
+    background-color:blue;
+    padding:10px;
+    font-size:20px;
+
+}
+
+label{
+    color:gray;
+    font-weight:100;
+}
+
+
+

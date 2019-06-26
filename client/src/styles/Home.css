@@ -1,0 +1,32 @@
+.homeContainer{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-box{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-box h1{
+    text-transform: uppercase;
+}
+
+.plaid-prompt{
+    color:gray;
+    font-family: Courier;
+    font-size: 25px;
+    font-weight:100;
+    margin-bottom:40px;
+}
+
+.plaid-btn{
+    background-color:blue;
+    color:white;
+    font-size:20px;
+    padding:20px;
+    border-radius:5px;
+}

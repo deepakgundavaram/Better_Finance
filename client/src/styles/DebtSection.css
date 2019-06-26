@@ -1,0 +1,23 @@
+.debtSectionContainer{
+    min-width:100%;
+    padding: 50px 0;
+}
+
+.debtSectionContainer div{
+    display: flex;
+    justify-content: center;
+}
+
+.debt_data{
+    padding:0 10px;
+    text-transform: uppercase;
+    font-weight: 250;
+    font-size:20px;
+}
+
+.cash_amount{
+    color:green;
+    font-weight: 400;
+}
+
+
