@@ -13,7 +13,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough 
 
 <img src='Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
