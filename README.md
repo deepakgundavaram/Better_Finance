@@ -43,5 +43,11 @@ What things you need to install the software and how to install them
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## GIF
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
