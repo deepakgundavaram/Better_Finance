@@ -12,7 +12,13 @@ class Spendings extends Component{
             transfer:0,
             food:0,
             recreational:0,
+            paymentPercent: "0%",
+            travelPercent:"0%",
+            transferPercent:"0%",
+            foodPercent:"0%",
+            recreationalPercent:"0%",
         }
+        this.bugetHelper = this.bugetHelper.bind(this);
     }
 
     componentDidMount(){
@@ -45,62 +51,84 @@ class Spendings extends Component{
         .catch(err => console.log(err));
     }
 
-    bugetHelper(){
-
+    bugetHelper(evt){
+        //gets the state corresponding to the input and gets the percentage taken
+        //from input
+        let percent = (this.state[evt.target.name]/evt.target.value) * 100;
+        let data = evt.target.name+"Percent";
+        if(evt.target.value === "") percent = 0;
+        this.setState({[data]:percent+"%"})
     }
 
-    render(){
-        const {payment, travel, transfer, food, recreational} = this.state;
-        console.log(payment + "amount");
+    saveBudget(){
+        
+    }
+
+    render(){ 
+        const {
+            payment, 
+            travel, 
+            transfer, 
+            food, 
+            recreational,
+            paymentPercent, 
+            travelPercent, 
+            transferPercent, 
+            foodPercent, 
+            recreationalPercent,
+        } = this.state;
+        
         return(
             <div className="spendingContainer">
                 <h1 className="">Here is where you will be able to keep track of all your spendings</h1> 
-
-                <p>Payment</p>
+                
+                <p>Payment:${payment.toFixed(2)}</p>
                 <div className="bar_input">
                     <div className="progressbarContainer">
-                        <div className="progressbar" style={{width:payment}}>
+                        <div className="progressbar" style={{width:paymentPercent}}>
                         </div>
                     </div>
                     <input placeholder="Budget" type="number" name="payment" onChange={this.bugetHelper} />
                 </div>
 
-                <p>Travel</p>
+                <p>Travel:${travel.toFixed(2)}</p>
                 <div className="bar_input">
                     <div className="progressbarContainer">
-                        <div className="progressbar" style={{width:travel}}>
+                        <div className="progressbar" style={{width:travelPercent}}>
                         </div>
                     </div>
                     <input placeholder="Budget" type="number" name="travel" onChange={this.bugetHelper} />
                 </div>
 
-                <p>Transfer</p>
+                <p>Transfer:${transfer.toFixed(2)}</p>
                 <div className="bar_input">
                     <div className="progressbarContainer">
-                        <div className="progressbar" style={{width:transfer}}>
+                        <div className="progressbar" style={{width:transferPercent}}>
                         </div>
                     </div>
                     <input placeholder="Budget" type="number" name="transfer" onChange={this.bugetHelper} />
                 </div>
 
 
-                <p>Food and Drink</p>
+                <p>Food and Drink:${food.toFixed(2)}</p>
                 <div className="bar_input">
                     <div className="progressbarContainer">
-                        <div className="progressbar" style={{width:food}}>
+                        <div className="progressbar" style={{width:foodPercent}}>
                         </div>
                     </div>
                     <input placeholder="Budget" type="number" name="food" onChange={this.bugetHelper} />
                 </div>
 
-                <p>Recreational</p>
+                <p>Recreational:${recreational.toFixed(2)}</p>
                 <div className="bar_input">
                     <div className="progressbarContainer">
-                        <div className="progressbar" style={{width:recreational}}>
+                        <div className="progressbar" style={{width:recreationalPercent}}>
                         </div>
                     </div>
                     <input placeholder="Budget" type="number" name="recreational" onChange={this.bugetHelper} />
                 </div>
+
+                <button onClick={this.saveBudget}> Lock Budget </button>
             </div>
         )
     }

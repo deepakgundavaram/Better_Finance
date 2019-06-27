@@ -29,6 +29,13 @@ const schema = Schema({
       },
       accountSubtype: {
         type: String
+      },
+      budget: {
+        payment:String,
+        travel:String,
+        transfer:String,
+        food:String,
+        recreation:String
       }
 
 });
