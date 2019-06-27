@@ -11,6 +11,15 @@ These instructions will get you a copy of the project up and running on your loc
 3. On the terminal type in the command "npm run dev" - where it starts up the react script and the node script concurrently 
 4. On your browser go type in "localhost:300" and Wallah welcome to Better Finance.
 
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+
 ### Prerequisites
 
 What things you need to install the software and how to install them
@@ -42,12 +51,4 @@ What things you need to install the software and how to install them
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
-
-<img src='Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
