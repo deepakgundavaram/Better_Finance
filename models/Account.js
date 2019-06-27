@@ -31,11 +31,26 @@ const schema = Schema({
         type: String
       },
       budget: {
-        payment:String,
-        travel:String,
-        transfer:String,
-        food:String,
-        recreation:String
+        payment:{
+          type:String,
+          default:"0%"
+        },
+        travel:{
+          type:String,
+          default:"0%"
+        },
+        transfer:{
+          type:String,
+          default:"0%"
+        },
+        food:{
+          type:String,
+          default:"0%"
+        },
+        recreation:{
+          type:String,
+          default:"0%"
+        }
       }
 
 });

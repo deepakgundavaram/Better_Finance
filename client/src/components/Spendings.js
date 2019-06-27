@@ -21,6 +21,12 @@ class Spendings extends Component{
         this.bugetHelper = this.bugetHelper.bind(this);
     }
 
+    componentWillMount(){
+        if(sessionStorage.getItem("key") == null){
+            this.props.history.push('/');
+        }
+    }
+
     componentDidMount(){
         axios.post("/api/plaid/accounts/transactions",null,  {headers: {"x-auth-token": sessionStorage.getItem("key")}})
         .then(results => {

@@ -35,7 +35,7 @@ class Register extends Component {
       sessionStorage.setItem("key", response.headers['x-auth-token']);
       this.props.history.push("/home");
     })
-    .catch(error => alert(error));
+    .catch((error) => alert(error.response.data));
 
 
   };

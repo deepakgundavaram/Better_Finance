@@ -6,6 +6,7 @@ const login = require("./routes/login");
 const signup = require("./routes/signup");
 const plaid = require('./routes/plaid');
 const debt = require('./routes/debt')
+const error = require("./middleware/error");
 const app = express();
 
 // if the web token is not defind the server will not run
@@ -39,6 +40,9 @@ app.use("/api/signup", signup);
 app.use("/api/login" , login);
 app.use("/api/plaid", plaid);
 app.use("/api/debt", debt);
+
+//error handling middleware
+app.use(error);
 
 const port = process.env.PORT || 5000; // process.env.port is Heroku's port if you choose to deploy the app there
 app.listen(port, () => console.log(`Server up and running on port ${port} ! this is the key: ${config.get("mongoURI")}`));
