@@ -8,8 +8,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Clone this project to your local machine 
 2. On the terminal travel to your folder where this project resides and type in the command "npm install"
-3. On the terminal type in the command "npm run dev" - where it starts up the react script and the node script concurrently 
-4. On your browser go type in "localhost:300" and Wallah welcome to Better Finance.
+3. On the terminal travel to the client folder and type in the command "npm install" one more time
+4. On the terminal type in the command "npm run dev" - where it starts up the react script and the node script concurrently 
+5. On your browser go type in "localhost:300" and Wallah welcome to Better Finance.
 
 ## Video Walkthrough
 
