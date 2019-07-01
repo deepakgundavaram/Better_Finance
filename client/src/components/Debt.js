@@ -21,7 +21,8 @@ class Debt extends Component{
        this.calculate = this.calculate.bind(this);
     }
 
-    //checking if the user is logged in yet
+    //checking if the user is logged in yet before the screen loads
+    //if not then send this user to the home page
     componentWillMount(){
         if(sessionStorage.getItem("key") == null){
             this.props.history.push('/');

@@ -47,7 +47,7 @@ const schema = Schema({
           type:String,
           default:"0%"
         },
-        recreation:{
+        recreational:{
           type:String,
           default:"0%"
         }

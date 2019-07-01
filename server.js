@@ -6,6 +6,7 @@ const login = require("./routes/login");
 const signup = require("./routes/signup");
 const plaid = require('./routes/plaid');
 const debt = require('./routes/debt')
+const budget = require('./routes/budget')
 const error = require("./middleware/error");
 const app = express();
 
@@ -40,6 +41,7 @@ app.use("/api/signup", signup);
 app.use("/api/login" , login);
 app.use("/api/plaid", plaid);
 app.use("/api/debt", debt);
+app.use("/api/budget", budget);
 
 //error handling middleware
 app.use(error);

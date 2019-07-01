@@ -1,30 +1,31 @@
 const router = require("express").Router();
+const asyncErrorHandler = require("../middleware/async");
 const auth = require("../middleware/auth");
 const Account = require("../models/Account");
 
 
-//this gets the budget in the databse
-rotuer.get("/getBudget", auth, async(req,res) => {
-    const id = req.user._id;
-    try{ 
-        const budget = await Account.findById({userId:id});
-    }
-    catch{
-        res.status(500).send("something went wrong in the database");
-    }
-
+//this route gets the budget in the databse
+router.get("/getBudget", auth, asyncErrorHandler(async(req,res) => {
+    const user = req.user._id;
+    const budget = await Account.findOne({userId:user});
     res.send(budget.budget);
-})
+}))
 
 
-//this save the budget in the database
-router.post("/saveBudget", auth, async(req,res) => {
-    const user = req.user_.id
-    const account = await Account.findById({userId:user});
-    const data = res.body.data;
-
+//this route save the budget in the database
+router.post("/saveBudget", auth, asyncErrorHandler(async(req,res,next) => {
+    const user = req.user._id
+    const data = req.body.data;
+    console.log(account);
     //save the data in data
-    account.update({userId:user}, )
-})
+    const dataSaved = await Account.updateMany({userId:user},{$set:{"budget.payment":data.payment, 
+    "budget.travel":data.travel,
+    "budget.transfer":data.transfer,
+    "budget.food":data.food,
+    "budget.recreation":data.recreational}});
+
+    //send the data back to the user
+    res.send(dataSaved);
+}))
 
 module.exports = router;
