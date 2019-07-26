@@ -1,6 +1,6 @@
 # Better_Finance
 
-The purspose of this application is to better someones finances. Using the Plaid API the app can retrieve a users personal finance records with their bank insitution(s). The dashboard shows all of the transactions this person has made in the pass 30 days. The spending page shows the type of categories this perons has made purchases towards and can place a budget for all of the categories. The debt page shows the users debt and can calcualate how long it is going to take the user to become debt free.
+The purpose of this application is to better someones finances. Using the Plaid API the app can retrieve a users personal finance records with their bank institution(s). The dashboard shows all of the transactions this person has made in the pass 30 days. The spending page shows the type of categories this person has made purchases towards and can place a budget for all of the categories. The debt page shows the users debt and can calculate how long it is going to take the user to become debt free.
 
 ## Getting Started
 
