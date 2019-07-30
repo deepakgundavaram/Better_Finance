@@ -11,6 +11,7 @@
     display:flex;
     justify-content: center;
     padding: 100px;
+
 }
 
 /* this is where all the text are on the top of the page */
@@ -52,4 +53,5 @@
 .chart{
    display: inline-block;
    min-width:100%;
+   overflow: scroll;
 }
