@@ -5,27 +5,32 @@ const Account = require("../models/Account");
 
 
 //this route gets the budget in the databse
-router.get("/getBudget", auth, asyncErrorHandler(async(req,res) => {
+router.get("/getBudget", auth, asyncErrorHandler(async (req, res) => {
     const user = req.user._id;
-    const budget = await Account.findOne({userId:user});
+    const budget = await Account.findOne({ userId: user });
     res.send(budget.budget);
 }))
 
 
 //this route save the budget in the database
-router.post("/saveBudget", auth, asyncErrorHandler(async(req,res,next) => {
+router.post("/saveBudget", auth, asyncErrorHandler(async (req, res, next) => {
     const user = req.user._id
     const data = req.body.data;
-    console.log(account);
+    console.log(data);
     //save the data in data
-    const dataSaved = await Account.updateMany({userId:user},{$set:{"budget.payment":data.payment, 
-    "budget.travel":data.travel,
-    "budget.transfer":data.transfer,
-    "budget.food":data.food,
-    "budget.recreation":data.recreational}});
+    const dataSaved = await Account.updateMany({ userId: user }, {
+        $set: {
+            "budget.payment": data.payment,
+            "budget.travel": data.travel,
+            "budget.transfer": data.transfer,
+            "budget.food": data.food,
+            "budget.recreation": data.recreational
+        }
+    });
 
     //send the data back to the user
-    res.send(dataSaved);
+    dataSaved.save();
+    console.log(dataSaved);
 }))
 
 module.exports = router;

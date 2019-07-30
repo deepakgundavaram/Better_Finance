@@ -1,39 +1,41 @@
-.container{
+.container {
     text-align: center;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-right:20px;
-    border-bottom:1px solid white;
-    background-color:black;
+    border-bottom: 1px solid white;
+    background-color: black;
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-.header-text{
+.header-text {
     font-family: "monospace";
-    font-size:20px;
-    float:right;
+    font-size: 20px;
+    float: right;
     text-decoration: none;
-    color:white;
+    color: white;
     margin-left: 10px;
+    margin: 15px 0;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    min-height: 100%;
 }
 
-.header-text:hover{
-    background-color:white;
-    color:black; 
+.header-text:hover {
+    background-color: white;
+    color: black;
 }
 
-.header-logo{
+.header-logo {
     float: left;
     color: green;
     font-size: 30px;
 }
 
-.header-logo:hover{
-    background-color:black;
-    color:orange;
+.header-logo:hover {
+    background-color: black;
+    color: orange;
 }

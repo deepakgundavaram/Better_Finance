@@ -1,5 +1,5 @@
-.debtContainer{
-    margin-top:50px;
+.debtContainer {
+    margin-top: 50px;
     min-height: 100%;
     min-width: 100%;
     display: flex;
@@ -8,55 +8,59 @@
     /* padding: 0 100px; */
 }
 
-.debtAmount h3{
-    display:flex;
+.debtAmount h3 {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    color:red;
+    color: red;
     letter-spacing: 2px;
     font-weight: 100;
 }
 
-.debtAmount h1{
+.debtAmount h1 {
     display: flex;
     flex-direction: column;
     letter-spacing: 2px;
-    font-weight: 150; 
+    font-weight: 150;
     font-size: 80px;
     align-items: center;
 }
 
-.debtCalculation{
+.debtCalculation {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
 }
 
-
-.debt_btn{
+.debt_btn {
     padding: 15px;
     margin: 50px;
     background-color: green;
-    color:white;
-    border-radius: 5px; 
+    color: white;
+    border-radius: 5px;
     font-size: 20px;
 }
 
-.debt_input{
-    display:flex;
+.debt_input {
+    display: flex;
     justify-content: center;
     align-content: center;
-    margin:10px 30px;
-    border:none;
-    border-bottom:1px solid black;
+    margin: 10px 30px;
+    border: none;
+    border-bottom: 1px solid black;
     font-size: 15px;
 }
 
-.inputs{
+.debt_name {
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+.inputs {
     display: flex;
     justify-content: center;
 }
 
-.calculated_debt{
+.calculated_debt {
     flex-direction: column;
 }
